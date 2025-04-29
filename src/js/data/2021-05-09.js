@@ -3,1383 +3,1661 @@ dataSet[dataSetVersion] = {};
 
 dataSet[dataSetVersion].options = [
   {
-    name: "Filter by Series Entry",
-    key: "series",
-    tooltip: "Check this to restrict to certain series.",
+    name: "Filter by World",
+    key: "world",
+    tooltip: "Check this to restrict to certain identity groups.",
     checked: false,
     sub: [
-      { name: "Books and CDs", key: "book" },
-      { name: "The Highly Responsive to Prayers", tooltip: "01 - Reiiden", key: "HRtP" },
-      { name: "The Story of Eastern Wonderland", tooltip: "02 - Fuumaroku", key: "SoEW" },
-      { name: "Phantasmagoria of Dim.Dream", tooltip: "03 - Yumejikuu", key: "PoDD" },
-      { name: "Lotus Land Story", tooltip: "04 - Gensoukyou", key: "LLS" },
-      { name: "Mystic Square", tooltip: "05 - Kaikidan", key: "MS" },
-      { name: "Embodiment of Scarlet Devil", tooltip: "06 - Koumakan", key: "EoSD" },
-      { name: "Perfect Cherry Blossom", tooltip: "07 - Youyoumu", key: "PCB" },
-      { name: "Immaterial and Missing Power", tooltip: "07.5 - Suimusou", key: "IaMP" },
-      { name: "Imperishable Night", tooltip: "08 - Eiyashou", key: "IN" },
-      { name: "Phantasmagoria of Flower View", tooltip: "09 - Kaeidzuka", key: "PoFV" },
-      { name: "Shoot the Bullet", tooltip: "09.5 - Bunkachou", key: "StB" },
-      { name: "Mountain of Faith", tooltip: "10 - Fuujinroku", key: "MoF" },
-      { name: "Scarlet Weather Rhapsody", tooltip: "10.5 - Hisouten", key: "SWR" },
-      { name: "Subterranean Animism", tooltip: "11 - Chireiden", key: "SA" },
-      { name: "Undefined Fantastic Object", tooltip: "12 - Seirensen", key: "UFO" },
-      { name: "Touhou Hisoutensoku", tooltip: "12.3 - Hisoutensoku", key: "soku" },
-      { name: "Double Spoiler", tooltip: "12.5 - Bunkachou", key: "DS" },
-      { name: "Great Fairy Wars", tooltip: "12.8 - Daisensou", key: "GFW" },
-      { name: "Ten Desires", tooltip: "13 - Shinreibyou", key: "TD" },
-      { name: "Hopeless Masquerade", tooltip: "13.5 - Shinkirou", key: "HM" },
-      { name: "Double Dealing Character", tooltip: "14 - Kishinjou", key: "DDC" },
-      { name: "Impossible Spell Card", tooltip: "14.3 - Amanojaku", key: "ISC" },
-      { name: "Urban Legend in Limbo", tooltip: "14.5 - Shinpiroku", key: "ULiL" },
-      { name: "Legacy of Lunatic Kingdom", tooltip: "15 - Kanjuden", key: "LoLK" },
-      { name: "Antinomy of Common Flowers", tooltip: "15.5 - Hyouibana", key: "AoCF" },
-      { name: "Hidden Star in Four Seasons", tooltip: "16 - Tenkuushou", key: "HSiFS" },
-      { name: "Violet Detector", tooltip: "16.5 - Hifuu Nightmare Diary", key: "VD" },
-      { name: "Wily Beast and Weakest Creature", tooltip: "17 - Kikeijuu", key: "WBaWC" },
-      { name: "Unconnected Marketeers", tooltip: "18 - Kouryuudou", key: "UM" },
+      { name: "Base Sinners", key: "base" },
+      { name: "LCCB", key: "lccb" },
+	  { name: "LCE", key: "lce" },
+	  { name: "Blade Lineage", key: "bl" },
+	  { name: "Kurokumo Clan", key: "kk" },
+      { name: "Zwei Association", key: "zwei" },
+      { name: "Shi Association", key: "shi" },
+      { name: "Cinq Association", key: "cinq" },
+	  { name: "Liu Association", key: "liu" },
+	  { name: "Seven Association", key: "seven" },
+      { name: "Oufi Association", key: "oufi" },
+      { name: "Dieci Association", key: "dieci" },
+      { name: "Devyat Association", key: "devyat" },    
+      { name: "The Middle", key: "middle" },
+      { name: "The Ring", key: "ring" },
+      { name: "Heishou Pack", key: "heishou" },
+      { name: "La Manchaland", key: "lamancha" },
+      { name: "Fanghunt and Firefist Offices", key: "fixers" },
+      { name: "Multicrack Office", key: "mc" },
+      { name: "Molar Office & Boatworks", key: "molar" },
+      { name: "District 10 Backstreets", key: "dis10" },
+	  { name: "District 20 Backstreets", key: "dis20" },
+      { name: "District 23 Backstreets", key: "dis23" },
+      { name: "Wuthering Heights", key: "wh" },
+      { name: "G Corp.", key: "gcorp" },
+	  { name: "K Corp.", key: "kcorp" },
+	  { name: "L Corp.", key: "lcorp" },
+	  { name: "N Corp.", key: "ncorp" },
+	  { name: "R Corp.", key: "rcorp" },
+	  { name: "T Corp.", key: "tcorp" },
+	  { name: "U Corp.", key: "ucorp" },
+      { name: "W Corp.", key: "wcorp" },
+      { name: "Former Library Guests", key: "guests" },
     ]
   },
   {
-    name: "Filter by Stage Enemy Appearances",
-    key: "stage",
-    tooltip: "Check this to restrict to characters that appear in certain stages as enemies.",
+    name: "Filter by Rarity",
+    key: "rarity",
+    tooltip: "Check this to restrict to identities based on their rarity.",
     checked: false,
-    sub: [ { name: "Stage 1", key: "st1" }, { name: "Stage 2", key: "st2" }, { name: "Stage 3", key: "st3" }, { name: "Stage 4", key: "st4" }, { name: "Stage 5/Penultimate", tooltip: "Stage 4 in 5-stage games, and Stage 8 in 9-stage games.", key: "st5" }, { name: "Stage 6/Final", key: "st6" }, { name: "Stage EX/Phantasm", key: "ex" }
+    sub: [ { name: "0", key: "1star" }, { name: "00", key: "2star" }, { name: "000", key: "3star" }
     ]
   },
   {
-    name: "Remove PC-98 Duplicates",
-    key: "pc98",
-    tooltip: "Check this to remove PC-98 characters with a Windows counterpart."
+    name: "Filter by Season",
+    key: "season",
+    tooltip: "Check this to restrict to identites from a specific season.",
+    checked: false,
+    sub: [ { name: "Season 0: Standard Fare", key: "s0" }, { name: "Season 1: Orientation", key: "s1" }, { name: "Season 2: Reminiscence", key: "s2" }, { name: "Season 3: Bon Voyage", key: "s3" }, { name: "Season 4: Clear All Cathy", key: "s4"}, { name: "Season 5: Oblivion", key: "s5" }
+    ]
   },
   {
-    name: "Remove Non-Girls",
-    key: "notgirl",
-    tooltip: "Check this to remove all non-female characters."
+    name: "Filter by Sinner",
+	key: "sinner",
+    tooltip: "Check this to restrict to specific sinners.",
+	checked: false,
+    sub: [
+      { name: "Yi Sang", tooltip: "Sinner 01 - Dreamy", key: "yisang" },
+      { name: "Faust", tooltip: "Sinner 02 - Cerebral", key: "faust" },
+      { name: "Don Quixote", tooltip: "Sinner 03 - Oblivion", key: "dq" },
+      { name: "Ryoshu", tooltip: "Sinner 04 - Smokey", key: "ryo" },
+      { name: "Meursault", tooltip: "Sinner 05 - Decay", key: "mrsalt" },
+      { name: "Hong Lu", tooltip: "Sinner 06 - Naive", key: "honglu" },
+      { name: "Heathcliff", tooltip: "Sinner 07 - Furious", key: "heath" },
+      { name: "Ishmael", tooltip: "Sinner 08 - Isolate", key: "ish" },
+      { name: "Rodion", tooltip: "Sinner 09 - Lusty", key: "rodya" },
+      { name: "Sinclair", tooltip: "Sinner 11 - Immature", key: "sinc" },
+      { name: "Outis", tooltip: "Sinner 12 - Militant", key: "outis" },
+      { name: "Gregor", tooltip: "Sinner 13 - Verminous", key: "greg" },
+	 ]
   },
   {
-    name: "Remove Nameless Characters",
-    key: "nameless",
-    tooltip: "Check this to remove all characters without canonical names.",
-    checked: false
+    name: "Filter by Status Effect",
+	key: "effect",
+    tooltip: "Filters by ID's with any instance of the given status effect within their kits. Ring ID's are considered to be bleed only.",
+	checked: false,
+    sub: [
+      { name: "Burn", key: "burn" },
+      { name: "Bleed", key: "bleed" },
+      { name: "Tremor", key: "tremor" },
+      { name: "Rupture", key: "rupture" },
+      { name: "Sinking", key: "sinking" },
+      { name: "Poise", key: "poise" },
+      { name: "Charge", key: "charge" },
+      { name: "None", key: "none" },
+	 ]
+  },
+  {
+    name: "Vergillius",
+    key: "verg",
+    tooltip: "For those who want to compare their sinners to allied Vergillius.",
+	checked: false
+  },
+  {
+    name: "Xichun",
+    key: "xichun",
+    tooltip: "For those who want to compare their sinners to allied Xichun.",
+	checked: false
+  },
+  {
+    name: "Gregor's Cockroach",
+    key: "pablo",
+    tooltip: "For the REAL power scaling arguments.",
+	checked: false
   }
 ];
 
-dataSet[dataSetVersion].characterData = [
-  {
-    name: "Hakurei Reimu",
-    img: "c5DqpgX.png",
-    opts: {
-      series: [ "book", "EoSD", "PCB", "IaMP", "IN", "PoFV", "StB", "SWR", "MoF", "SA", "UFO", "soku", "DS", "TD", "HM", "DDC", "ISC", "ULiL", "LoLK", "AoCF", "HSiFS", "VD", "WBaWC", "UM" ],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Kirisame Marisa",
-    img: "tJnkSzK.png",
-    opts: {
-      series: [ "book", "EoSD", "PCB", "IaMP", "IN", "PoFV", "StB", "SWR", "MoF", "SA", "UFO", "soku", "DS", "GFW", "TD", "HM", "DDC", "ISC", "ULiL", "LoLK", "AoCF", "HSiFS", "VD", "WBaWC", "UM" ],
-      stage: ["st4", "ex"]
-    }
-  },
-  {
-    name: "Rumia",
-    img: "0YT7QlS.png",
-    opts: {
-      series: ["book", "EoSD", "StB", "HM"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Daiyousei",
-    img: "NWlZud3.png",
-    opts: {
-      series: ["book", "EoSD"],
-      stage: ["st2", "ex"],
-      nameless: true
-    },
-  },
-  {
-    name: "Cirno",
-    img: "qdveFSy.png",
-    opts: {
-      series: [ "book", "EoSD", "PCB", "PoFV", "StB", "soku", "GFW", "HM", "DDC", "ISC", "HSiFS" ],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Hong Meiling",
-    img: "ptGp0x4.png",
-    opts: {
-      series: ["book", "EoSD", "IaMP", "StB", "soku"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Koakuma",
-    img: "vBKdDm4.png",
-    opts: {
-      series: ["book", "EoSD"],
-      stage: ["st4"],
-      nameless: true
-    }
-  },
-  {
-    name: "Patchouli Knowledge",
-    img: "A7ZnuHo.png",
-    opts: {
-      series: ["book", "EoSD", "IaMP", "StB", "SWR", "soku", "HM"],
-      stage: ["st4", "ex"]
-    }
-  },
-  {
-    name: "Izayoi Sakuya",
-    img: "sgZPf11.png",
-    opts: {
-      series: [ "book", "EoSD", "PCB", "IaMP", "IN", "PoFV", "StB", "SWR", "soku", "HM", "DDC", "ISC", "UM" ],
-      stage: ["st5", "st6"]
-    }
-  },
-  {
-    name: "Remilia Scarlet",
-    img: "8UX7hKE.png",
-    opts: {
-      series: ["book", "EoSD", "IaMP", "IN", "StB", "SWR", "soku", "HM", "ISC", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Flandre Scarlet",
-    img: "OhaDcnc.png",
-    opts: {
-      series: ["book", "EoSD", "StB", "VD"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Letty Whiterock",
-    img: "MgzqjFK.png",
-    opts: {
-      series: ["book", "PCB", "StB", "HM"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Chen",
-    img: "ohmetZh.png",
-    opts: {
-      series: ["book", "PCB", "IaMP", "StB", "SWR", "soku", "HM"],
-      stage: ["st2", "ex"]
-    }
-  },
-  {
-    name: "Alice Margatroid",
-    img: "aDIf0pN.png",
-    opts: {
-      series: ["book", "PCB", "IaMP", "IN", "StB", "SWR", "soku", "HM"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Lily White",
-    img: "2Pr8b2N.png",
-    opts: {
-      series: ["book", "PCB", "PoFV", "HM", "HSiFS"],
-      stage: ["st4", "ex"]
-    }
-  },
-  {
-    name: "Lunasa Prismriver",
-    img: "htOMdDQ.png",
-    opts: {
-      series: ["book", "PCB", "PoFV", "HM", "AoCF"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Merlin Prismriver",
-    img: "PrRPujP.png",
-    opts: {
-      series: ["book", "PCB", "PoFV", "HM", "AoCF"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Lyrica Prismriver",
-    img: "ze79bFC.png",
-    opts: {
-      series: ["book", "PCB", "PoFV", "HM", "AoCF"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Konpaku Youmu",
-    img: "WMjyRLJ.png",
-    opts: {
-      series: [ "book", "PCB", "IaMP", "IN", "PoFV", "StB", "SWR", "soku", "TD", "HM", "ISC", "WBaWC" ],
-      stage: ["st5", "st6"]
-    }
-  },
-  {
-    name: "Saigyouji Yuyuko",
-    img: "VT9mTGb.png",
-    opts: {
-      series: [ "book", "PCB", "IaMP", "IN", "StB", "SWR", "soku", "TD", "HM", "ISC", "VD" ],
-      stage: ["st1", "st6"]
-    }
-  },
-  {
-    name: "Yakumo Ran",
-    img: "rshnJPV.png",
-    opts: {
-      series: ["book", "PCB", "IaMP", "IN", "StB", "SWR", "soku", "HM", "VD"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Yakumo Yukari",
-    img: "qsceD4I.png",
-    opts: {
-      series: [ "book", "PCB", "IaMP", "IN", "StB", "SWR", "soku", "HM", "ISC", "AoCF", "VD" ],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Ibuki Suika",
-    img: "pLdMjQ3.png",
-    opts: {
-      series: ["book", "IaMP", "StB", "SWR", "soku", "DS", "HM", "ISC", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Wriggle Nightbug",
-    img: "8DLUAPf.png",
-    opts: {
-      series: ["book", "IN", "StB", "HM"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Mystia Lorelei",
-    img: "6KyhLqE.png",
-    opts: {
-      series: ["book", "IN", "PoFV", "StB", "HM"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Kamishirasawa Keine",
-    img: "99w0Chm.png",
-    opts: {
-      series: ["book", "IN", "StB", "HM", "ISC"],
-      stage: ["st3", "ex"]
-    }
-  },
-  {
-    name: "Inaba Tewi",
-    img: "yqNfNje.png",
-    opts: {
-      series: ["book", "IN", "PoFV", "StB", "HM"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Reisen Udongein Inaba",
-    img: "PrYzRcC.png",
-    opts: {
-      series: ["book", "IN", "PoFV", "StB", "soku", "HM", "LoLK", "AoCF"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Yagokoro Eirin",
-    img: "ceo4DhK.png",
-    opts: {
-      series: ["book", "IN", "StB", "HM", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Houraisan Kaguya",
-    img: "2YDuTk3.png",
-    opts: {
-      series: ["book", "IN", "StB", "HM", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Fujiwara no Mokou",
-    img: "3zo4VKV.png",
-    opts: {
-      series: ["book", "IN", "StB", "HM", "ISC", "ULiL", "AoCF", "VD"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Shameimaru Aya",
-    img: "8TLXMST.png",
-    opts: {
-      series: [ "book", "PoFV", "StB", "SWR", "MoF", "soku", "HM", "ISC", "HSiFS" ],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Medicine Melancholy",
-    img: "IImsp7K.png",
-    opts: {
-      series: ["book", "PoFV", "StB", "HM"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Kazami Yuuka",
-    img: "MZXJQq5.png",
-    opts: {
-      series: ["book", "PoFV", "StB", "HM"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Onozuka Komachi",
-    img: "aX4WIH8.png",
-    opts: {
-      series: ["book", "PoFV", "StB", "SWR", "soku", "HM"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Shiki Eiki, Yamaxanadu",
-    img: "nPBvatH.png",
-    opts: {
-      series: ["book", "PoFV", "StB", "HM", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Aki Shizuha",
-    img: "3pDRgvR.png",
-    opts: {
-      series: ["MoF", "DS", "HM"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Aki Minoriko",
-    img: "bV0DaN7.png",
-    opts: {
-      series: ["MoF", "DS", "HM"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Kagiyama Hina",
-    img: "J11NjNj.png",
-    opts: {
-      series: ["MoF", "DS", "HM"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Kawashiro Nitori",
-    img: "4Ufced2.png",
-    opts: {
-      series: ["MoF", "DS", "HM", "ISC", "ULiL", "AoCF"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Inubashiri Momiji",
-    img: "qGMjnYk.png",
-    opts: {
-      series: ["MoF", "DS", "ISC"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Kochiya Sanae",
-    img: "ATTRSWU.png",
-    opts: {
-      series: ["MoF", "SA", "UFO", "soku", "DS", "TD", "HM", "ISC", "LoLK", "UM"],
-      stage: ["st5", "ex"]
-    }
-  },
-  {
-    name: "Yasaka Kanako",
-    img: "nQ78Lz7.png",
-    opts: {
-      series: ["MoF", "soku", "DS", "HM", "ISC", "VD"],
-      stage: ["st6", "ex"]
-    }
-  },
-  {
-    name: "Moriya Suwako",
-    img: "yJaD5ZV.png",
-    opts: {
-      series: ["MoF", "SA", "soku", "DS", "HM", "ISC", "VD"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Nagae Iku",
-    img: "xgAlECj.png",
-    opts: {
-      series: ["SWR", "soku", "DS", "HM", "VD"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Hinanawi Tenshi",
-    img: "tZLYivt.png",
-    opts: {
-      series: ["SWR", "soku", "DS", "HM", "ISC", "AoCF", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Kisume",
-    img: "VgJgaEf.png",
-    opts: {
-      series: ["SA", "DS"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Kurodani Yamame",
-    img: "sqgJ2St.png",
-    opts: {
-      series: ["SA", "DS", "HM"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Mizuhashi Parsee",
-    img: "lkoAJod.png",
-    opts: {
-      series: ["SA", "DS", "HM"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Hoshiguma Yuugi",
-    img: "tDO653L.png",
-    opts: {
-      series: ["SA", "DS", "HM"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Komeiji Satori",
-    img: "dup7Nt6.png",
-    opts: {
-      series: ["SA", "DS", "HM", "VD"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Kaenbyou Rin (Orin)",
-    img: "uQjbw1W.png",
-    opts: {
-      series: ["SA", "DS", "HM"],
-      stage: ["st4", "st5", "st6"]
-    }
-  },
-  {
-    name: "Reiuji Utsuho (Okuu)",
-    img: "DfdaXPW.png",
-    opts: {
-      series: ["SA", "soku", "DS", "HM", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Komeiji Koishi",
-    img: "wVCcens.png",
-    opts: {
-      series: ["SA", "DS", "HM", "ULiL", "AoCF", "VD"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Nazrin",
-    img: "EpHQbiY.png",
-    opts: {
-      series: ["UFO", "DS", "HM"],
-      stage: ["st1", "st5"]
-    }
-  },
-  {
-    name: "Tatara Kogasa",
-    img: "kJbv4dc.png",
-    opts: {
-      series: ["UFO", "TD", "DS", "HM"],
-      stage: ["st2", "ex"]
-    }
-  },
-  {
-    name: "Kumoi Ichirin",
-    img: "Fyn5yVx.png",
-    opts: {
-      series: ["UFO", "DS", "HM", "ULiL", "AoCF"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Murasa Minamitsu",
-    img: "39KYpvW.png",
-    opts: {
-      series: ["UFO", "DS", "HM"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Toramaru Shou",
-    img: "5yihisu.png",
-    opts: {
-      series: ["UFO", "DS", "HM"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Hijiri Byakuren",
-    img: "2ppPxny.png",
-    opts: {
-      series: ["UFO", "DS", "HM", "ISC", "ULiL", "AoCF", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Houjuu Nue",
-    img: "zL4S8Mj.png",
-    opts: {
-      series: ["UFO", "DS", "TD", "HM", "VD"],
-      stage: ["st4", "st6", "ex"]
-    }
-  },
-  {
-    name: "Himekaidou Hatate",
-    img: "LgvoTaJ.png",
-    opts: {
-      series: ["DS", "HM", "ISC"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Sunny Milk",
-    img: "VbqXiB6.png",
-    opts: {
-      series: ["book", "GFW", "HM"],
-      stage: ["st1", "st2", "st3"]
-    }
-  },
-  {
-    name: "Luna Child",
-    img: "OBqgP48.png",
-    opts: {
-      series: ["book", "GFW", "HM"],
-      stage: ["st1", "st2", "st3"]
-    }
-  },
-  {
-    name: "Star Sapphire",
-    img: "sNw61ap.png",
-    opts: {
-      series: ["book", "GFW", "HM"],
-      stage: ["st1", "st2", "st3"]
-    }
-  },
-  {
-    name: "Kasodani Kyouko",
-    img: "sLiqEBA.png",
-    opts: {
-      series: ["TD", "HM", "ISC"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Miyako Yoshika",
-    img: "6jq6eh6.png",
-    opts: {
-      series: ["TD", "HM", "ISC"],
-      stage: ["st3", "st4"]
-    }
-  },
-  {
-    name: "Kaku Seiga",
-    img: "090hLPL.png",
-    opts: {
-      series: ["TD", "HM", "ISC"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Soga no Tojiko",
-    img: "y0UXwFO.png",
-    opts: {
-      series: ["TD", "HM"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Mononobe no Futo",
-    img: "WTZ97LE.png",
-    opts: {
-      series: ["TD", "HM", "ISC", "ULiL", "AoCF"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Toyosatomimi no Miko",
-    img: "3Xiqd22.png",
-    opts: {
-      series: ["TD", "HM", "ISC", "ULiL", "AoCF", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Futatsuiwa Mamizou",
-    img: "gMpWdmA.png",
-    opts: {
-      series: ["TD", "HM", "ISC", "ULiL", "AoCF", "VD"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Hata no Kokoro",
-    img: "fxCGmUk.png",
-    opts: {
-      series: ["book", "HM", "ULiL", "AoCF"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Wakasagihime",
-    img: "brWCLVx.png",
-    opts: {
-      series: ["DDC", "ISC"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Sekibanki",
-    img: "VAMLiJD.png",
-    opts: {
-      series: ["DDC", "ISC"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Imaizumi Kagerou",
-    img: "qwwL0bB.png",
-    opts: {
-      series: ["DDC", "ISC"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Tsukumo Benben",
-    img: "vWNeMaH.png",
-    opts: {
-      series: ["DDC", "ISC"],
-      stage: ["st4", "ex"]
-    }
-  },
-  {
-    name: "Tsukumo Yatsuhashi",
-    img: "EJFQHQN.png",
-    opts: {
-      series: ["DDC", "ISC"],
-      stage: ["st4", "ex"]
-    }
-  },
-  {
-    name: "Kijin Seija",
-    img: "16RUacj.png",
-    opts: {
-      series: ["DDC", "ISC"],
-      stage: ["st5", "st6"]
-    }
-  },
-  {
-    name: "Sukuna Shinmyoumaru",
-    img: "Zl2tN7W.png",
-    opts: {
-      series: ["DDC", "ISC", "ULiL", "AoCF", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Horikawa Raiko",
-    img: "SLLEccR.png",
-    opts: {
-      series: ["DDC", "ISC", "AoCF", "VD"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Usami Sumireko",
-    img: "mc7ICW6.png",
-    opts: {
-      series: ["ULiL", "AoCF", "VD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Seiran",
-    img: "0ra00WG.png",
-    opts: {
-      series: ["LoLK", "VD"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Ringo",
-    img: "xQOsFlZ.png",
-    opts: {
-      series: ["LoLK", "VD"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Doremy Sweet",
-    img: "rGS7dyn.png",
-    opts: {
-      series: ["LoLK", "AoCF", "VD"],
-      stage: ["st3", "ex"]
-    }
-  },
-  {
-    name: "Kishin Sagume",
-    img: "HLT338X.png",
-    opts: {
-      series: ["LoLK", "VD"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Clownpiece",
-    img: "9Jje7ZQ.jpg",
-    opts: {
-      series: ["LoLK", "VD"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Junko",
-    img: "NsfLZjY.jpg",
-    opts: {
-      series: ["LoLK", "VD"],
-      stage: ["st6", "ex"]
-    }
-  },
-  {
-    name: "Hecatia Lapislazuli",
-    img: "EH3Ulol.png",
-    opts: {
-      series: ["LoLK", "VD"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Eternity Larva",
-    img: "ql5KxJH.png",
-    opts: {
-      series: ["HSiFS", "VD"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Sakata Nemuno",
-    img: "gYFhJ3Y.png",
-    opts: {
-      series: ["HSiFS", "VD"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Komano Aunn",
-    img: "wWUStkF.png",
-    opts: {
-      series: ["HSiFS", "VD"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Yatadera Narumi",
-    img: "wrPVhAo.png",
-    opts: {
-      series: ["HSiFS", "VD"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Nishida Satono",
-    img: "8w9gAy2.png",
-    opts: {
-      series: ["HSiFS", "VD"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Teireida Mai",
-    img: "DesAqAC.png",
-    opts: {
-      series: ["HSiFS", "VD"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Matara Okina",
-    img: "icWvMyo.png",
-    opts: {
-      series: ["HSiFS", "VD"],
-      stage: ["st6", "ex"]
-    }
-  },
-  {
-    name: "Yorigami Shion",
-    img: "LenxXR4.png",
-    opts: {
-      series: ["AoCF"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Yorigami Joon",
-    img: "V9OznT1.png",
-    opts: {
-      series: ["AoCF"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Ebisu Eika",
-    img: "Ke3316E.png",
-    opts: {
-      series: ["WBaWC"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Ushizaki Urumi",
-    img: "ru2vIIW.png",
-    opts: {
-      series: ["WBaWC"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Niwatari Kutaka",
-    img: "QTQt0ZL.png",
-    opts: {
-      series: ["WBaWC"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Kicchou Yachie",
-    img: "CzcIMxF.png",
-    opts: {
-      series: ["WBaWC"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Joutouguu Mayumi",
-    img: "GxeziYO.png",
-    opts: {
-      series: ["WBaWC"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Haniyasushin Keiki",
-    img: "Z4jclTi.png",
-    opts: {
-      series: ["WBaWC"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Kurokoma Saki",
-    img: "H2v2GPy.png",
-    opts: {
-      series: ["WBaWC"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Goutokuji Mike",
-    img: "FltSdtv.png",
-    opts: {
-      series: ["UM"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Yamashiro Takane",
-    img: "Aaq99GQ.png",
-    opts: {
-      series: ["UM"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Komakusa Sannyo",
-    img: "DKupiv1.png",
-    opts: {
-      series: ["UM"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Tamatsukuri Misumaru",
-    img: "BHwfCAQ.png",
-    opts: {
-      series: ["UM"],
-      stage: ["st4"]
-    }
-  },
-  {
-    name: "Kudamaki Tsukasa",
-    img: "KNy3FZq.png",
-    opts: {
-      series: ["UM"],
-      stage: ["st5", "st6", "ex"]
-    }
-  },
-  {
-    name: "Iizunamaru Megumu",
-    img: "QA63m27.png",
-    opts: {
-      series: ["UM"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Tenkyuu Chimata",
-    img: "Ga4AYtv.png",
-    opts: {
-      series: ["UM"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Himemushi Momoyo",
-    img: "iH2wqbd.png",
-    opts: {
-      series: ["UM"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Hieda no Akyuu",
-    img: "ogONuLZ.png",
-    opts: {
-      series: ["book"],
-      stage: []
-    }
-  },
-  { 
-    name: "Tokiko",
-    img: "Y4maOc8.png", 
-    opts: {
-      series: ["book"],
-      stage: [],
-      nameless: true
-    } 
-  },
-  {
-    name: "Reisen (Manga)",
-    img: "cWjCo2j.png",
-    opts: {
-      series: ["book"],
-      stage: []
-    }
-  },
-  {
-    name: "Watatsuki no Toyohime",
-    img: "uEBxsEX.png",
-    opts: {
-      series: ["book"],
-      stage: []
-    }
-  },
-  {
-    name: "Watatsuki no Yorihime",
-    img: "Txu2P7S.png",
-    opts: {
-      series: ["book"],
-      stage: []
-    }
-  },
-  {
-    name: "Maribel Hearn",
-    img: "XUI9vPo.png",
-    opts: {
-      series: ["book"],
-      stage: []
-    }
-  },
-  {
-    name: "Usami Renko",
-    img: "1P5EXRt.png",
-    opts: {
-      series: ["book"],
-      stage: []
-    }
-  },
-  {
-    name: "Ibaraki Kasen",
-    img: "dQHnPPe.png",
-    opts: {
-      series: ["book", "ULiL", "AoCF"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Motoori Kosuzu",
-    img: "jEsJJo8.png",
-    opts: {
-      series: ["book"],
-      stage: []
-    }
-  },
-  {
-    name: "Okunoda Miyoi",
-    img: "a5V63gx.png",
-    opts: {
-      series: ["book"],
-      stage: []
-    }
-  },
-  {
-    name: "Hakurei Reimu (PC-98)",
-    img: "IZsGAMS.png",
-    opts: {
-      series: ["HRtP", "SoEW", "PoDD", "LLS", "MS"],
-      stage: ["st4"],
-      pc98: true
-    }
-  },
-  {
-    name: "Shingyoku (Female)",
-    img: "KuPiR2k.png",
-    opts: {
-      series: ["HRtP"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Mima",
-    img: "odH03t2.png",
-    opts: {
-      series: ["HRtP", "SoEW", "PoDD", "MS"],
-      stage: ["st3", "st5", "st6"]
-    }
-  },
-  {
-    name: "Elis",
-    img: "ytnL1xd.png",
-    opts: {
-      series: ["HRtP"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Kikuri",
-    img: "fX2Kqik.png",
-    opts: {
-      series: ["HRtP"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Sariel",
-    img: "Wyc7YFw.png",
-    opts: {
-      series: ["HRtP"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Konngara",
-    img: "dg9jLHv.png",
-    opts: {
-      series: ["HRtP"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Rika",
-    img: "02Xb4pU.png",
-    opts: {
-      series: ["SoEW"],
-      stage: ["st1", "ex"]
-    }
-  },
-  {
-    name: "Meira",
-    img: "p529JgT.png",
-    opts: {
-      series: ["SoEW"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Kirisame Marisa (PC-98)",
-    img: "wxE7cBm.png",
-    opts: {
-      series: ["SoEW", "PoDD", "LLS", "MS"],
-      stage: ["st4"],
-      pc98: true
-    }
-  },
-  { name: "Ellen", img: "3iNNL0c.png", opts: {
-      series: ["PoDD"],
-      stage: []
-    } },
-  {
-    name: "Kotohime",
-    img: "kRSGtpq.png",
-    opts: {
-      series: ["PoDD"],
-      stage: []
-    }
-  },
-  {
-    name: "Kana Anaberal",
-    img: "rBvKMk5.png",
-    opts: {
-      series: ["PoDD"],
-      stage: []
-    }
-  },
-  {
-    name: "Asakura Rikako",
-    img: "VIf5gUK.png",
-    opts: {
-      series: ["PoDD"],
-      stage: []
-    }
-  },
-  {
-    name: "Kitashirakawa Chiyuri",
-    img: "tZFBycy.png",
-    opts: {
-      series: ["PoDD"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Okazaki Yumemi",
-    img: "c9rnG3n.png",
-    opts: {
-      series: ["PoDD"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Ruukoto",
-    img: "dko67SJ.png",
-    opts: {
-      series: ["PoDD"],
-      stage: []
-    }
-  },
-  {
-    name: "Orange",
-    img: "m8wXE5U.png",
-    opts: {
-      series: ["LLS"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Kurumi",
-    img: "0rvq1ph.png",
-    opts: {
-      series: ["LLS"],
-      stage: ["st2"]
-    }
-  },
-  {
-    name: "Elly",
-    img: "iIPftHn.png",
-    opts: {
-      series: ["LLS"],
-      stage: ["st3"]
-    }
-  },
-  {
-    name: "Yuuka (PC-98)",
-    img: "ivUSwxp.png",
-    opts: {
-      series: ["LLS", "MS"],
-      stage: ["st5", "st6"],
-      pc98: true
-    }
-  },
-  {
-    name: "Mugetsu",
-    img: "bYA9E16.png",
-    opts: {
-      series: ["LLS"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Gengetsu",
-    img: "TIOTtV9.png",
-    opts: {
-      series: ["LLS"],
-      stage: ["ex"]
-    }
-  },
-  {
-    name: "Sara",
-    img: "2QUbCrU.png",
-    opts: {
-      series: ["MS"],
-      stage: ["st1"]
-    }
-  },
-  {
-    name: "Louise",
-    img: "nDM5aB6.png",
-    opts: {
-      series: ["MS"],
-      stage: ["st2", "st4"]
-    }
-  },
-  {
-    name: "Alice (PC-98)",
-    img: "KaBuRTW.png",
-    opts: {
-      series: ["MS"],
-      stage: ["st3", "ex"],
-      pc98: true
-    }
-  },
-  {
-    name: "Yuki",
-    img: "FfcmDgp.png",
-    opts: {
-      series: ["MS"],
-      stage: ["st4"]
-    }
-  },
-  { name: "Mai", img: "r6w7TX1.png", opts: {
-      series: ["MS"],
-      stage: ["st4"]
-    } },
-  {
-    name: "Yumeko",
-    img: "PcPqkdO.png",
-    opts: {
-      series: ["MS"],
-      stage: ["st5"]
-    }
-  },
-  {
-    name: "Shinki",
-    img: "gPE95S7.png",
-    opts: {
-      series: ["MS"],
-      stage: ["st6"]
-    }
-  },
-  {
-    name: "Mimi-chan",
-    img: "zBl2zlv.png",
-    opts: {
-      series: ["PoDD"],
-      stage: [],
-      notgirl: true 
-    }
-  },
-  {
-    name: "Unzan",
-    img: "r5eWREh.png",
-    opts: {
-      series: ["UFO", "DS", "HM", "ULiL", "AoCF"],
-      stage: ["st3"],
-      notgirl: true
-    }
-  },
-  {
-    name: "Genji",
-    img: "LoUqOuH.png",
-    opts: {
-      series: ["SoEW", "PoDD", "LLS", "MS"],
-      stage: [],
-      notgirl: true 
-    }
-  },
-  {
-    name: "Shingyoku (Male)",
-    img: "a5uwlgN.png",
-    opts: {
-      series: ["HRtP"],
-      stage: ["st1"],
-      notgirl: true 
-    }
-  },
-  {
-    name: "YuugenMagan",
-    img: "IOW8GdU.png",
-    opts: {
-      series: ["HRtP"],
-      stage: ["st3"],
-      notgirl: true 
-    }
-  },
-  {
-    name: "Evil Eye Sigma",
-    img: "rAFUMwE.png",
-    opts: {
-      series: ["SoEW"],
-      stage: ["ex"],
-      notgirl: true 
-    }
-  },
-  {
-    name: "Great Catfish",
-    img: "BgRi9Oh.png",
-    opts: {
-      series: ["soku", "AoCF"],
-      stage: ["st6"],
-      notgirl: true,
-      nameless: true
-    }
-  },
-  {
-    name: "Morichika Rinnosuke",
-    img: "ITUhsGj.png",
-    opts: {
-      series: ["book", "HM"],
-      stage: [],
-      notgirl: true 
-    }
-  },
-  {
-    name: "Fortune Teller",
-    img: "BYot23O.png",
-    opts: {
-      series: ["book"],
-      stage: [],
-      notgirl: true,
-      nameless: true
-    }
-  },
-  {
-    name: "Hisoutensoku",
-    img: "P4JZ2it.png",
-    opts: {
-      series: ["soku"],
-      stage: [],
-      notgirl: true 
-    }
+dataSet[dataSetVersion].characterData = [ 
+ //Yi Sang
+  {
+  name: "LCB Sinner Yi Sang",
+  img: "hEitl0m.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["yisang"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "Seven Association South Section 6 Yi Sang",
+  img: "d6nwd00.png",
+  opts: {
+    world: ["seven"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["yisang"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Molar Office Fixer Yi Sang",
+  img: "RjXhqSw.png",
+  opts: {
+    world: ["molar"],
+	rarity: ["2star"],
+	season: ["s2"],
+	sinner: ["yisang"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "The Pequod First Mate Yi Sang",
+  img: "i2drTu9.png",
+  opts: {
+    world: ["ucorp"],
+	rarity: ["2star"],
+	season: ["s3"],
+	sinner: ["yisang"],
+	effect: ["bleed", "poise"],
+   }
+  },
+  {
+  name: "Dieci Association South Section 4 Yi Sang",
+  img: "fWKwFHq.png",
+  opts: {
+    world: ["dieci"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["yisang"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "LCE E.G.O::Lantern Yi Sang",
+  img: "vQdvapS.png",
+  opts: {
+    world: ["lce"],
+	rarity: ["2star"],
+	season: ["s5"],
+	sinner: ["yisang"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Blade Lineage Salsu Yi Sang",
+  img: "0IzrLZ4.png",
+  opts: {
+    world: ["bl"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["yisang"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "Effloresced E.G.O::Spicebush Yi Sang",
+  img: "Tc6OXLE.png",
+  opts: {
+    world: ["kcorp"],
+	rarity: ["3star"],
+	season: ["s2"],
+	sinner: ["yisang"],
+	effect: ["sinking", "tremor"],
+   }
+  },
+  {
+  name: "W Corp. L3 Cleanup Agent Yi Sang",
+  img: "X0bC7jh.png",
+  opts: {
+    world: ["wcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["yisang"],
+	effect: ["rupture", "charge"],
+   }
+  },
+  {
+  name: "The Ring Pointillist Student Yi Sang",
+  img: "YHN1kVD.png",
+  opts: {
+    world: ["ring"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["yisang"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Lobotomy E.G.O::Solemn Lament Yi Sang",
+  img: "RxTpbyN.png",
+  opts: {
+    world: ["lcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["yisang"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "Liu Association South Section 3 Yi Sang",
+  img: "LT5Mozs.png",
+  opts: {
+    world: ["liu"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["yisang"],
+	effect: ["burn"],
+   }
+  },
+  
+ //Faust
+  {
+  name: "LCB Sinner Faust",
+  img: "y62PpsY.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["faust"],
+	effect: ["none"],
+   }
+  },
+  {
+  name: "W Corp. L2 Cleanup Agent Faust",
+  img: "Fg908eH.png",
+  opts: {
+    world: ["wcorp"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["faust"],
+	effect: ["charge"],
+   }
+  },
+  {
+  name: "Lobotomy Corp. Remnant Faust",
+  img: "bIKCcS0.png",
+  opts: {
+    world: ["lcorp"],
+	rarity: ["2star"],
+	season: ["s1"],
+	sinner: ["faust"],
+	effect: ["rupture", "poise"],
+   }
+  },
+  {
+  name: "Zwei Assoc. South Section 4 Faust",
+  img: "qXmMTyt.png",
+  opts: {
+    world: ["zwei"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["faust"],
+	effect: ["none"],
+   }
+  },
+  {
+  name: "Wuthering Heights Butler Faust",
+  img: "T9G4WYv.png",
+  opts: {
+    world: ["wh"],
+	rarity: ["2star"],
+	season: ["s4"],
+	sinner: ["faust"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "The One Who Grips Faust",
+  img: "VLcxt86.png",
+  opts: {
+    world: ["ncorp"],
+	rarity: ["3star"],
+	season: ["s1"],
+	sinner: ["faust"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Seven Assoc. South Section 4 Faust",
+  img: "XG8LLnO.png",
+  opts: {
+    world: ["seven"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["faust"],
+	effect: ["rupture", "poise"],
+   }
+  },
+  {
+  name: "Lobotomy E.G.O::Regret Faust",
+  img: "V5Zvrcl.png",
+  opts: {
+    world: ["lcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["faust"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Blade Lineage Salsu Faust",
+  img: "k8xLtv2.png",
+  opts: {
+    world: ["bl"],
+	rarity: ["3star"],
+	season: ["s3"],
+	sinner: ["faust"],
+	effect: ["bleed", "poise"],
+   }
+  },
+  {
+  name: "MultiCrack Office Rep Faust",
+  img: "E7l4s54.png",
+  opts: {
+    world: ["mc"],
+	rarity: ["3star"],
+	season: ["s4"],
+	sinner: ["faust"],
+	effect: ["charge"],
+   }
+  },
+  {
+  name: "LCE E.G.O::Ardor Blossom Star Faust",
+  img: "4FMiM9H.png",
+  opts: {
+    world: ["lce"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["faust"],
+	effect: ["burn"],
+   }
+  },
+
+  
+ //Don Quixote
+ {
+  name: "LCB Sinner Don Quixote",
+  img: "vj7oRfc.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["dq"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Shi Assoc. South Section 5 Director Don Quixote",
+  img: "bc0xM7z.png",
+  opts: {
+    world: ["shi"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["dq"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "N Corp. Mittelhammer Don Quixote",
+  img: "CNMdSo8.png",
+  opts: {
+    world: ["ncorp"],
+	rarity: ["2star"],
+	season: ["s1"],
+	sinner: ["dq"],
+	effect: ["bleed", "tremor"],
+   }
+  },
+  {
+  name: "Lobotomy E.G.O::Lantern Don Quixote",
+  img: "cNwf407.png",
+  opts: {
+    world: ["lcorp"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["dq"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Blade Lineage Salsu Don Quixote",
+  img: "TKRin70.png",
+  opts: {
+    world: ["bl"],
+	rarity: ["2star"],
+	season: ["s3"],
+	sinner: ["dq"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "W Corp. L3 Cleanup Agent Don Quixote",
+  img: "GN8Sxh5.png",
+  opts: {
+    world: ["wcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["dq"],
+	effect: ["charge", "rupture"],
+   }
+  },
+  {
+  name: "Cinq Assoc. South Section 5 Director Don Quixote",
+  img: "0zK8Ooq.png",
+  opts: {
+    world: ["cinq"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["dq"],
+	effect: ["none"],
+   }
+  },
+  {
+  name: "The Middle Little Sister Don Quixote",
+  img: "UY3cpqL.png",
+  opts: {
+    world: ["middle"],
+	rarity: ["3star"],
+	season: ["s3"],
+	sinner: ["dq"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "T Corp. Class 3 Collection Staff Don Quixote",
+  img: "319xA58.png",
+  opts: {
+    world: ["tcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["dq"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "The Manager of La Manchaland Don Quixote",
+  img: "TuMJJ1l.png",
+  opts: {
+    world: ["lamancha"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["dq"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Cinq Assoc. East Section 3 Don Quixote",
+  img: "LcJ6dKR.png",
+  opts: {
+    world: ["cinq"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["dq"],
+	effect: ["burn", "poise"],
+   }
+  },
+  
+ //Ryoshu
+ {
+  name: "LCB Sinner Ryoshu",
+  img: "YUzZRYo.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["ryo"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "Seven Assoc. South Section 6 Ryoshu",
+  img: "oEdL8qG.png",
+  opts: {
+    world: ["seven"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["ryo"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "LCCB Assistant Manager Ryoshu",
+  img: "6kOGVmX.png",
+  opts: {
+    world: ["lccb"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["ryo"],
+	effect: ["tremor", "rupture", "poise"],
+   }
+  },
+  {
+  name: "Liu Assoc. South Section 4 Ryoshu",
+  img: "sCGAlkM.png",
+  opts: {
+    world: ["liu"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["ryo"],
+	effect: ["burn"],
+   }
+  },
+  {
+  name: "District 20 Yurodivy Ryoshu",
+  img: "Os6TmTD.png",
+  opts: {
+    world: ["dis20"],
+	rarity: ["2star"],
+	season: ["s4"],
+	sinner: ["ryo"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Kurokumo Clan Wakashu Ryoshu",
+  img: "ZWP1MNd.png",
+  opts: {
+    world: ["kk"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["ryo"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "R.B. Chef de Cuisine Ryoshu",
+  img: "mxfnnY4.png",
+  opts: {
+    world: ["dis23"],
+	rarity: ["3star"],
+	season: ["s1"],
+	sinner: ["ryo"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "W Corp. L3 Cleanup Agent Ryoshu",
+  img: "XYnhzp0.png",
+  opts: {
+    world: ["wcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["ryo"],
+	effect: ["charge"],
+   }
+  },
+  {
+  name: "Edgar Family Chief Butler Ryoshu",
+  img: "pPUwgVd.png",
+  opts: {
+    world: ["wh"],
+	rarity: ["3star"],
+	season: ["s4"],
+	sinner: ["ryo"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "Lobotomy E.G.O::Red Eyes & Pentience Ryoshu",
+  img: "REPsqCP.png",
+  opts: {
+    world: ["lcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["ryo"],
+	effect: ["bleed", "charge"],
+   }
+  },
+  {
+  name: "Heishou Pack - Mao Branch Ryoshu",
+  img: "AshUV2H.png",
+  opts: {
+    world: ["heishou"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["ryo"],
+	effect: ["rupture"],
+   }
+  },
+  
+ //Meursault
+ {
+  name: "LCB Sinner Meursault",
+  img: "JknBS0I.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["mrsalt"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Liu Assoc. South Section 6 Meursault",
+  img: "VoX9tKI.png",
+  opts: {
+    world: ["liu"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["mrsalt"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Rosespanner Workshop Fixer Meursault",
+  img: "BRg5gGh.png",
+  opts: {
+    world: ["kcorp"],
+	rarity: ["2star"],
+	season: ["s2"],
+	sinner: ["mrsalt"],
+	effect: ["tremor", "charge"],
+   }
+  },
+  {
+  name: "The Middle Little Brother Meursault",
+  img: "Qsz5oOU.png",
+  opts: {
+    world: ["middle"],
+	rarity: ["2star"],
+	season: ["s3"],
+	sinner: ["mrsalt"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Dead Rabbits Boss Meursault",
+  img: "4xWlVOc.png",
+  opts: {
+    world: ["wh"],
+	rarity: ["2star"],
+	season: ["s4"],
+	sinner: ["mrsalt"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "W Corp. L2 Cleanup Agent Meursault",
+  img: "h0lcdMH.png",
+  opts: {
+    world: ["wcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["mrsalt"],
+	effect: ["rupture", "chrage"],
+   }
+  },
+  {
+  name: "N Corp. Grobhammer Meursault",
+  img: "bOTKBls.png",
+  opts: {
+    world: ["ncorp"],
+	rarity: ["3star"],
+	season: ["s1"],
+	sinner: ["mrsalt"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "R Corp. 4th Pack Rhino Meursault",
+  img: "nIKqbSE.png",
+  opts: {
+    world: ["rcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["mrsalt"],
+	effect: ["bleed", "charge"],
+   }
+  },
+  {
+  name: "Blade Lineage Mentor Meursault",
+  img: "KH86V6M.png",
+  opts: {
+    world: ["bl"],
+	rarity: ["3star"],
+	season: ["s3"],
+	sinner: ["mrsalt"],
+	effect: ["bleed", "poise"],
+   }
+  },
+  {
+  name: "Dieci Assoc. South Section 4 Director Meursault",
+  img: "M1sSgXr.png",
+  opts: {
+    world: ["dieci"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["mrsalt"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "Cinq Assoc. West Section 3 Meursault",
+  img: "SIJmZ76.png",
+  opts: {
+    world: ["cinq"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["mrsalt"],
+	effect: ["rupture", "poise"],
+   }
+  },
+  
+ //Hong Lu
+ {
+  name: "LCB Sinner Hong Lu",
+  img: "Sh25yFR.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["honglu"],
+	effect: ["rupture", "sinking"],
+   }
+  },
+  {
+  name: "Kurokumo Clan Wakashu Hong Lu",
+  img: "JvdeVkE.png",
+  opts: {
+    world: ["kk"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["honglu"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Liu Assoc. South Section 5 Hong Lu",
+  img: "iJ0eCfX.png",
+  opts: {
+    world: ["liu"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["honglu"],
+	effect: ["burn"],
+   }
+  },
+  {
+  name: "W Corp. L2 Cleanup Agent Hong Lu",
+  img: "brEAcAn.png",
+  opts: {
+    world: ["wcorp"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["honglu"],
+	effect: ["rupture", "charge"],
+   }
+  },
+  {
+  name: "Hook Office Fixer Hong Lu",
+  img: "W8oJO2O.png",
+  opts: {
+    world: ["guests"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["honglu"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Fanghunt Office Fixer Hong Lu",
+  img: "JBTc5tn.png",
+  opts: {
+    world: ["fixers"],
+	rarity: ["2star"],
+	season: ["s5"],
+	sinner: ["honglu"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Tingtang Gang Gangleader Hong Lu",
+  img: "8X4eagD.png",
+  opts: {
+    world: ["dis10"],
+	rarity: ["3star"],
+	season: ["s1"],
+	sinner: ["honglu"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "K Corp. Class 3 Excision Staff Hong Lu",
+  img: "n2cJlq1.png",
+  opts: {
+    world: ["kcorp"],
+	rarity: ["3star"],
+	season: ["s2"],
+	sinner: ["honglu"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Dieci Assoc. South Section 4 Hong Lu",
+  img: "Bdzl6Ts.png",
+  opts: {
+    world: ["dieci"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["honglu"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "District 20 Yurodivy Hong Lu",
+  img: "ewDmBDL.png",
+  opts: {
+    world: ["dis20"],
+	rarity: ["3star"],
+	season: ["s4"],
+	sinner: ["honglu"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Full-Stop Office Rep Hong Lu",
+  img: "Nvzassp.png",
+  opts: {
+    world: ["guests"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["honglu"],
+	effect: ["poise"],
+   }
+  },
+  
+ //Heathcliff
+ {
+  name: "LCB Sinner Heathcliff",
+  img: "gMGNw61.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["heath"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Shi Assoc. South Section 5 Heathcliff",
+  img: "t3AVlNi.png",
+  opts: {
+    world: ["shi"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["heath"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "N Corp. Kleinhammer Heathcliff",
+  img: "Wh5usev.png",
+  opts: {
+    world: ["ncorp"],
+	rarity: ["2star"],
+	season: ["s1"],
+	sinner: ["heath"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Seven Assoc. South Section 4 Heathcliff",
+  img: "WEmuBDw.png",
+  opts: {
+    world: ["seven"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["heath"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "MultiCrack Office Fixer Heathcliff",
+  img: "k5SCo6H.png",
+  opts: {
+    world: ["mc"],
+	rarity: ["2star"],
+	season: ["s4"],
+	sinner: ["heath"],
+	effect: ["charge"],
+   }
+  },
+  {
+  name: "R Corp. 4th Pack Rabbit Heathcliff",
+  img: "gDLNkg5.png",
+  opts: {
+    world: ["rcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["heath"],
+	effect: ["bleed", "rupture", "charge"],
+   }
+  },
+  {
+  name: "Lobotomy E.G.O::Sunshower Heathcliff",
+  img: "UxsHVt3.png",
+  opts: {
+    world: ["kcorp"],
+	rarity: ["3star"],
+	season: ["s2"],
+	sinner: ["heath"],
+	effect: ["rupture", "sinking"],
+   }
+  },
+  {
+  name: "The Pequod Harpooner Heathcliff",
+  img: "NqJ287X.png",
+  opts: {
+    world: ["ucorp"],
+	rarity: ["3star"],
+	season: ["s3"],
+	sinner: ["heath"],
+	effect: ["bleed", "poise"],
+   }
+  },
+  {
+  name: "Oufi Assoc. South Section 3 Heathcliff",
+  img: "aSo4jNz.png",
+  opts: {
+    world: ["oufi"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["heath"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Wild Hunt Heathcliff",
+  img: "BKPIirM.png",
+  opts: {
+    world: ["wh"],
+	rarity: ["3star"],
+	season: ["s4"],
+	sinner: ["heath"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "Full-Stop Office Fixer Heathcliff",
+  img: "ljKs176.png",
+  opts: {
+    world: ["guests"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["heath"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "Kurokumo Clan Wakashu Heathcliff",
+  img: "1KViLPC.png",
+  opts: {
+    world: ["kk"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["heath"],
+	effect: ["bleed"],
+   }
+  },
+  
+ //Ishmael
+ {
+  name: "LCB Sinner Ishmael",
+  img: "x4Fwb7j.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["ish"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Shi Assoc. South Section 5 Ishmael",
+  img: "iCiSmZk.png",
+  opts: {
+    world: ["shi"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["ish"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "LCCB Assistant Manager Ishmael",
+  img: "aWEGGYI.png",
+  opts: {
+    world: ["lccb"],
+	rarity: ["2star"],
+	season: ["s1"],
+	sinner: ["ish"],
+	effect: ["tremor", "rupture"],
+   }
+  },
+  {
+  name: "Lobotomy E.G.O::Sloshing Ishmael",
+  img: "WP1yrqA.png",
+  opts: {
+    world: ["kcorp"],
+	rarity: ["2star"],
+	season: ["s2"],
+	sinner: ["ish"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Edgar Family Butler Ishmael",
+  img: "8eaHL6H.png",
+  opts: {
+    world: ["wh"],
+	rarity: ["2star"],
+	season: ["s4"],
+	sinner: ["ish"],
+	effect: ["poise", "sinking"],
+   }
+  },
+  {
+  name: "R Corp. 4th Pack Reindeer Ishmael",
+  img: "hdrVvcX.png",
+  opts: {
+    world: ["rcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["ish"],
+	effect: ["sinking", "charge"],
+   }
+  },
+  {
+  name: "Liu Assoc. South Section 4 Ishmael",
+  img: "rAiQ9RE.png",
+  opts: {
+    world: ["liu"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["ish"],
+	effect: ["burn"],
+   }
+  },
+  {
+  name: "Molar Boatworks Fixer Ishmael",
+  img: "mgflxEc.png",
+  opts: {
+    world: ["molar"],
+	rarity: ["3star"],
+	season: ["s2"],
+	sinner: ["ish"],
+	effect: ["tremor", "sinking"],
+   }
+  },
+  {
+  name: "The Pequod Captain Ishmael",
+  img: "ewGvmeF.png",
+  opts: {
+    world: ["ucorp"],
+	rarity: ["3star"],
+	season: ["s3"],
+	sinner: ["ish"],
+	effect: ["bleed", "poise"],
+   }
+  },
+  {
+  name: "Zwei Assoc. West Section 3 Ishmael",
+  img: "RSFMyqL.png",
+  opts: {
+    world: ["zwei"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["ish"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Kurokumo Clan Captain Ishmael",
+  img: "yGMVhxe.png",
+  opts: {
+    world: ["kk"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["ish"],
+	effect: ["bleed"],
+   }
+  },
+  
+ //Rodya
+ {
+  name: "LCB Sinner Rodion",
+  img: "FBWQKmq.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["rodya"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "LCCB Assistant Manager Rodion",
+  img: "ahKgiRS.png",
+  opts: {
+    world: ["lccb"],
+	rarity: ["2star"],
+	season: ["s1"],
+	sinner: ["rodya"],
+	effect: ["none"],
+   }
+  },
+  {
+  name: "N Corp. Mittelhammer Rodion",
+  img: "EioCQHr.png",
+  opts: {
+    world: ["ncorp"],
+	rarity: ["2star"],
+	season: ["s1"],
+	sinner: ["rodya"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Zwei Assoc. South Section 5 Rodion",
+  img: "vLCYTCc.png",
+  opts: {
+    world: ["zwei"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["rodya"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "T Corp. Class 2 Collection Staff Rodion",
+  img: "kM4DZEw.png",
+  opts: {
+    world: ["tcorp"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["rodya"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Kurokumo Clan Wakashu Rodion",
+  img: "F4p0Azf.png",
+  opts: {
+    world: ["kk"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["rodya"],
+	effect: ["bleed", "poise"],
+   }
+  },
+  {
+  name: "Rosespanner Workshop Rep Rodion",
+  img: "V3CwhWf.png",
+  opts: {
+    world: ["kcorp"],
+	rarity: ["3star"],
+	season: ["s2"],
+	sinner: ["rodya"],
+	effect: ["tremor", "charge"],
+   }
+  },
+  {
+  name: "Dieci Assoc. South Section 4 Rodion",
+  img: "WKsDZuS.png",
+  opts: {
+    world: ["dieci"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["rodya"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "Liu Assoc. South Section 4 Director Rodion",
+  img: "rqV9Q3x.png",
+  opts: {
+    world: ["liu"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["rodya"],
+	effect: ["burn"],
+   }
+  },
+  {
+  name: "Devyat' Assoc. North Section 3 Rodion",
+  img: "JzsvfKS.png",
+  opts: {
+    world: ["devyat"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["rodya"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "The Princess of La Manachaland Rodion",
+  img: "SgIbSRb.png",
+  opts: {
+    world: ["lamancha"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["rodya"],
+	effect: ["bleed"],
+   }
+  },
+  
+ //Sinclair
+ {
+  name: "LCB Sinner Sinclair",
+  img: "aEkArRN.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["sinc"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Zwei Assoc. South Section 6 Sinclair",
+  img: "wDiU2UJ.png",
+  opts: {
+    world: ["zwei"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["sinc"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Los Mariachis Jefe Sinclair",
+  img: "ZvGXnK3.png",
+  opts: {
+    world: ["dis10"],
+	rarity: ["2star"],
+	season: ["s1"],
+	sinner: ["sinc"],
+	effect: ["sinking", "poise"],
+   }
+  },
+  {
+  name: "Lobotomy E.G.O::Red Sheet Sinclair",
+  img: "3a2oJij.png",
+  opts: {
+    world: ["kcorp"],
+	rarity: ["2star"],
+	season: ["s2"],
+	sinner: ["sinc"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Molar Boatworks Fixer Sinclair",
+  img: "2Sppdhl.png",
+  opts: {
+    world: ["molar"],
+	rarity: ["2star"],
+	season: ["s2"],
+	sinner: ["sinc"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Zwei Assoc. West Section 3 Sinclair",
+  img: "QEqPOPj.png",
+  opts: {
+    world: ["zwei"],
+	rarity: ["2star"],
+	season: ["s5"],
+	sinner: ["sinc"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Blade Lineage Salsu Sinclair",
+  img: "7AvPiM3.png",
+  opts: {
+    world: ["bl"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["sinc"],
+	effect: ["bleed", "poise"],
+   }
+  },
+  {
+  name: "The One Who Shall Grip Sinclair",
+  img: "p2eh1kc.png",
+  opts: {
+    world: ["ncorp"],
+	rarity: ["3star"],
+	season: ["s1"],
+	sinner: ["sinc"],
+	effect: ["burn", "bleed"],
+   }
+  },
+  {
+  name: "Cinq Assoc. South Section 4 Director Sinclair",
+  img: "jfNXBb7.png",
+  opts: {
+    world: ["cinq"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["sinc"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "Dawn Office Fixer Sinclair",
+  img: "bSp3jVj.png",
+  opts: {
+    world: ["guests"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["sinc"],
+	effect: ["burn"],
+   }
+  },
+  {
+  name: "Devyat' Assoc. North Section 3 Sinclair",
+  img: "yNNSuZv.png",
+  opts: {
+    world: ["devyat"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["sinc"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "The Middle Little Brother Sinclair",
+  img: "KH8q1yJ.png",
+  opts: {
+    world: ["middle"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["sinc"],
+	effect: ["bleed"],
+   }
+  },
+  
+ //Outis
+ {
+  name: "LCB Sinner Outis",
+  img: "IeJfWkb.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["outis"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Blade Lineage Salsu Outis",
+  img: "EMOTGJ0.png",
+  opts: {
+    world: ["bl"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["outis"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "G Corp. Head Manager Outis",
+  img: "3ORH25M.png",
+  opts: {
+    world: ["gcorp"],
+	rarity: ["2star"],
+	season: ["s1"],
+	sinner: ["outis"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "Cinq Assoc. South Section 4 Outis",
+  img: "f3helSF.png",
+  opts: {
+    world: ["cinq"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["outis"],
+	effect: ["poise"],
+   }
+  },
+  {
+  name: "The Ring Pointillist Student Outis",
+  img: "k3Z7761.png",
+  opts: {
+    world: ["ring"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["outis"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Seven Assoc. South Section 6 Director Outis",
+  img: "8QnO6dp.png",
+  opts: {
+    world: ["seven"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["outis"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Molar Office Fixer Outis",
+  img: "9atLva7.png",
+  opts: {
+    world: ["molar"],
+	rarity: ["3star"],
+	season: ["s2"],
+	sinner: ["outis"],
+	effect: ["tremor"],
+   }
+  },
+  {
+  name: "Lobotomy E.G.O::Magic Bullet Outis",
+  img: "oH658EX.png",
+  opts: {
+    world: ["lcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["outis"],
+	effect: ["burn", "poise"],
+   }
+  },
+  {
+  name: "Wuthering Heights Chief Butler Outis",
+  img: "4PL7ft0.png",
+  opts: {
+    world: ["wh"],
+	rarity: ["3star"],
+	season: ["s4"],
+	sinner: ["outis"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "W Corp. L3 Cleanup Captain Outis",
+  img: "AQMXuBV.png",
+  opts: {
+    world: ["wcorp"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["outis"],
+	effect: ["rupture", "charge"],
+   }
+  },
+  {
+  name: "The Barber of La Manchaland Outis",
+  img: "qbfjlGb.png",
+  opts: {
+    world: ["lamancha"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["outis"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "Heishou Pack - Mao Branch Outis",
+  img: "w7KoE7s.png",
+  opts: {
+    world: ["heishou"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["outis"],
+	effect: ["rupture"],
+   }
+  },
+  
+ //Gregor
+ {
+  name: "LCB Sinner Gregor",
+  img: "l17bKNc.png",
+  opts: {
+    world: ["base"],
+	rarity: ["1star"],
+	season: ["s0"],
+	sinner: ["greg"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Liu Assoc. South Section 6 Gregor",
+  img: "cCEfwqf.png",
+  opts: {
+    world: ["liu"],
+	rarity: ["2star"],
+	season: ["s0"],
+	sinner: ["greg"],
+	effect: ["burn"],
+   }
+  },
+  {
+  name: "R.B. Sous-chef Gregor",
+  img: "RjGqEtO.png",
+  opts: {
+    world: ["dis23"],
+	rarity: ["2star"],
+	season: ["s1"],
+	sinner: ["greg"],
+	effect: ["burn"],
+   }
+  },
+  {
+  name: "Rosespanner Workshop Fixer Gregor",
+  img: "ybxqduU.png",
+  opts: {
+    world: ["kcorp"],
+	rarity: ["2star"],
+	season: ["s2"],
+	sinner: ["greg"],
+	effect: ["tremor", "rupture", "charge"],
+   }
+  },
+  {
+  name: "Kurokumo Clan Captain Gregor",
+  img: "C4SXWB3.png",
+  opts: {
+    world: ["kk"],
+	rarity: ["2star"],
+	season: ["s3"],
+	sinner: ["greg"],
+	effect: ["bleed"],
+   }
+  },
+  {
+  name: "G Corp. Manager Corporal Gregor",
+  img: "9OmFt4u.png",
+  opts: {
+    world: ["gcorp"],
+	rarity: ["3star"],
+	season: ["s1"],
+	sinner: ["greg"],
+	effect: ["rupture"],
+   }
+  },
+  {
+  name: "Zwei Assoc. South Section 4 Gregor",
+  img: "Vxe8edH.png",
+  opts: {
+    world: ["zwei"],
+	rarity: ["3star"],
+	season: ["s0"],
+	sinner: ["greg"],
+	effect: ["none"],
+   }
+  },
+  {
+  name: "Twinhook Pirates First Mate Gregor",
+  img: "YImLiFh.png",
+  opts: {
+    world: ["ucorp"],
+	rarity: ["3star"],
+	season: ["s3"],
+	sinner: ["greg"],
+	effect: ["bleed", "poise"],
+   }
+  },
+  {
+  name: "Edgar Family Heir Gregor",
+  img: "988Cz0a.png",
+  opts: {
+    world: ["wh"],
+	rarity: ["3star"],
+	season: ["s4"],
+	sinner: ["greg"],
+	effect: ["sinking"],
+   }
+  },
+  {
+  name: "The Priest of La Manchaland Gregor",
+  img: "2AryYEK.png",
+  opts: {
+    world: ["lamancha"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["greg"],
+	effect: ["bleed", "rupture"],
+   }
+  },
+  {
+  name: "Firefist Office Survivor Gregor",
+  img: "5iUqmGt.png",
+  opts: {
+    world: ["fixers"],
+	rarity: ["3star"],
+	season: ["s5"],
+	sinner: ["greg"],
+	effect: ["burn"],
+   }
+  },
+  
+ //Miscellaneous
+ {
+  name: "Vergillius",
+  img: "TXUG7gq.png",
+  opts: {
+    verg: true
+   }
+  },
+  {
+  name: "Xichun",
+  img: "Sx9LdhP.png",
+  opts: {
+    xichun: true
+   }
+  },
+  {
+  name: "Gregor's Cockroach",
+  img: "0fgx1gG.png",
+  opts: {
+    pablo: true
+   }
   }
+ 
 ];
